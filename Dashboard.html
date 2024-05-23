@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Booking Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+        <div class="booking-form col-md-6 col-sm-8 p-4 bg-white rounded">
+            <h2 class="text-center">Airline Booking Form</h2>
+            <form onsubmit="myFunc(event)">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="airline">Airline</label>
+                        <select class="form-control" id="airline" required>
+                            <option value="">Choose Airline</option>
+                            <option value="EK777">Emirates(EK-777)</option>
+                            <option value="QAR987">Qatar Airways(QAR-987)</option>
+                            <option value="FZ430">Fly Dubai(FZ-430)</option>
+                        </select>   
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="passport">Passport Number</label>
+                        <input type="text" class="form-control" id="passport" placeholder="Enter your passport number" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" class="form-control" id="contact" placeholder="Enter your contact number" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="departure">Departure</label>
+                        <select class="form-control" id="departure" required>
+                            <option value="">Select Departure Airport</option>
+                            <option value="DXB">Dubai International Airport (DXB)</option>
+                            <option value="AUH">Abu Dhabi International Airport (AUH)</option>
+                            <option value="DOH">Hamad International Airport (DOH)</option>
+                            <option value="RUH">King Khalid International Airport (RUH)</option>
+                            <option value="JED">King Abdulaziz International Airport (JED)</option>
+                            <option value="MCT">Muscat International Airport (MCT)</option>
+                            <option value="AMM">Queen Alia International Airport (AMM)</option>
+                            <option value="BAH">Bahrain International Airport (BAH)</option>
+                            <option value="ISB">Islamabad International Airport (ISB)</option>
+                            <option value="KHI">Jinnah International Airport (KHI)</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="destination">Destination Airport</label>
+                        <select class="form-control" id="destination" required>
+                            <option value="">Select Destination Airport</option>
+                            <option value="DXB">Dubai International Airport (DXB)</option>
+                            <option value="AUH">Abu Dhabi International Airport (AUH)</option>
+                            <option value="DOH">Hamad International Airport (DOH)</option>
+                            <option value="RUH">King Khalid International Airport (RUH)</option>
+                            <option value="JED">King Abdulaziz International Airport (JED)</option>
+                            <option value="MCT">Muscat International Airport (MCT)</option>
+                            <option value="AMM">Queen Alia International Airport (AMM)</option>
+                            <option value="BAH">Bahrain International Airport (BAH)</option>
+                            <option value="ISB">Islamabad International Airport (ISB)</option>
+                            <option value="KHI">Jinnah International Airport (KHI)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="clas">Class</label>
+                        <select class="form-control" id="clas" required>
+                            <option value="">Select Class</option>
+                            <option value="Economy Class">Economy Class</option>
+                            <option value="Bussiness Class">Bussiness Class</option>
+                            <option value="First Class">First Class</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="fare">Fare</label>
+                        <input type="text" class="form-control" id="fare" required readonly>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="seat">Seat</label>
+                        <select class="form-control" id="seat" required>
+                            <option value="">Select Seat no</option>
+                            <option value="01A">01A</option>
+                            <option value="02B">02B</option>
+                            <option value="03C">03C</option>
+                            <option value="04C">04C</option>
+                            <option value="05D">05D</option>
+                            <option value="06E">06E</option>
+                            <option value="07F">07F</option>
+                            <option value="08G">08G</option>
+                            <option value="09H">09H</option>
+                            <option value="09J">09J</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="date">Date of Travel</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                </div>
+                <button type="submit" id="book" class="btn btn-custom btn-block">Book Now</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./app2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

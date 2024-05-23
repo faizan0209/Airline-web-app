@@ -1,0 +1,151 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('./bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.booking-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-control, .btn-custom {
+  border-radius: 5px;
+}
+
+.btn-custom {
+  background-color: black;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .booking-form {
+      max-width: 80%;
+      padding: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .booking-form {
+      max-width: 90%;
+      padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-form {
+      max-width: 95%;
+      padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .booking-form {
+      width: 100%;
+      padding: 10px;
+  }
+}
+
+
+
+/* login */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('./bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form img {
+  width: 100px;
+  height: auto;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.btn-login, .btn-signup {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+  /* registration */
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .btn-login, .btn-signup {
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .login-container {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  h2{
+    font-family: "Fjalla One", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 20px;
+  }

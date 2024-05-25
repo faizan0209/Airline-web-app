@@ -7,13 +7,13 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  /* height: 100vh; */
   background: url('./bg.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .booking-form {
@@ -65,18 +65,6 @@ body {
 
 
 /* login */
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background: url('./bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
-}
-
 .login-container {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
